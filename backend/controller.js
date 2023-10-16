@@ -5,10 +5,12 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
-const getreviewerRoutes= require("./routes/getreviewer");
+const getreviewerRoutes = require("./routes/getreviewer");
+const getTodoListRoutes = require("./routes/todoList");
 
-app.get('/getreviewer',getreviewerRoutes);
+app.get("/getreviewer", getreviewerRoutes);
+app.get("/getTodolist", getTodoListRoutes);
 
-module.exports = app ;
+module.exports = app;

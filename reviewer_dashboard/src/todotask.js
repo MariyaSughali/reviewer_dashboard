@@ -8,20 +8,11 @@ function TodoTask() {
   const [todotask, settodoData] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:3030/getreviewer")
-      .then((response) => {
-        if (response.data && response.data.length > 0) {
-          settodoData(
-            response.data.filter(
-              (user) => user.isdraft === null && user.iscompleted === null
-            )
-          );
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    axios.get("http://localhost:3030/getTodoList").then((response) => {
+      if (response.data && response.data.length > 0) {
+        settodoData(response.data.filter((user) => user.iscompleted === true));
+      }
+    });
   }, []);
   function formatDate(dateString) {
     const date = new Date(dateString);
@@ -50,7 +41,7 @@ function TodoTask() {
               </tr>
             </thead>
             <tbody>
-              {todotask.slice(0, 4).map((item) => (
+              {todotask.map((item) => (
                 <tr key={item.id}>
                   <td>{item.file_name}</td>
                   <td>{formatDate(item.assigned_dt)}</td>

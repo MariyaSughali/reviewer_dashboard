@@ -10,15 +10,15 @@ function ReviwerDashboard() {
   const [todotask, settodoData] = useState([]);
 
   useEffect(() => {
+    axios.get("http://localhost:3030/getTodoList").then((response) => {
+      if (response.data && response.data.length > 0) {
+        settodoData(response.data.filter((user) => user.iscompleted === true));
+      }
+    });
     axios
       .get("http://localhost:3030/getreviewer")
       .then((response) => {
         if (response.data && response.data.length > 0) {
-          settodoData(
-            response.data.filter(
-              (user) => user.isdraft === null && user.iscompleted === null
-            )
-          );
           setdraftData(response.data.filter((user) => user.isdraft === true));
           setcompletedData(
             response.data.filter((user) => user.iscompleted === true)

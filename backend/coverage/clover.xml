@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1697105592185" clover="3.2.0">
-  <project timestamp="1697105592186" name="All files">
-    <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="22" coveredelements="22" complexity="0" loc="21" ncloc="21" packages="3" files="3" classes="3"/>
+<coverage generated="1697435095828" clover="3.2.0">
+  <project timestamp="1697435095828" name="All files">
+    <metrics statements="31" coveredstatements="31" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="33" coveredelements="33" complexity="0" loc="31" ncloc="31" packages="3" files="4" classes="4"/>
     <package name="backend">
-      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="controller.js" path="C:\Users\MariyaSughali\Desktop\lyric tranxify\reviewer\backend\controller.js">
-        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -14,8 +14,10 @@
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
       </file>
     </package>
     <package name="backend.config">
@@ -28,7 +30,7 @@
       </file>
     </package>
     <package name="backend.routes">
-      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="getreviewer.js" path="C:\Users\MariyaSughali\Desktop\lyric tranxify\reviewer\backend\routes\getreviewer.js">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
@@ -39,6 +41,17 @@
         <line num="9" count="3" type="stmt"/>
         <line num="13" count="3" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
+      </file>
+      <file name="todoList.js" path="C:\Users\MariyaSughali\Desktop\lyric tranxify\reviewer\backend\routes\todoList.js">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
       </file>
     </package>
   </project>

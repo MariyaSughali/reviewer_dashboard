@@ -43,7 +43,7 @@ function Draft() {
               </tr>
             </thead>
             <tbody>
-              {draftData.slice(0, 4).map((item) => (
+              {draftData.map((item) => (
                 <tr key={item.id}>
                   <td className="paddingleft">{item.file_name}</td>
                   <td>{formatDate(item.assigned_dt)}</td>

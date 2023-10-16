@@ -38,7 +38,7 @@ function CompletedTask() {
               </tr>
             </thead>
             <tbody>
-              {completedData.slice(0, 4).map((item) => (
+              {completedData.map((item) => (
                 <tr key={item.id}>
                   <td>{item.file_name}</td>
                   <td>
