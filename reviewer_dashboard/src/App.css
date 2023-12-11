@@ -116,7 +116,7 @@ main aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  height: 87vh;
   background: var(--color-white);
   width: 270px;
 }
@@ -165,174 +165,86 @@ main aside .sidebar h4 {
 /* reviewerdashboard*/
 .revcontent {
   display: flex;
+  background-color: #f2fbfe;
 }
 .revcontainer {
-  height: 100vh;
+  margin-left: 2%;
+  margin-right: 1%;
+  max-height: 87vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-right: 3%;
-  padding-bottom: 3%;
-  margin-left: 3%;
+  overflow: auto;
 }
-.revrow1 {
+.revcontainer::-webkit-scrollbar {
+  display: none;
+}
+.rev_dash_heading {
+  size: 10px;
+}
+.rev_queue {
+  flex: 1;
+  background-color: #ffffff;
+  margin: 10px;
+}
+.rev_rows {
+  flex: 1;
   display: flex;
+  flex-direction: row;
+}
+.rev_myqueue {
   flex: 1;
-  /* width: 100%; */
-  height: 100%;
-  padding-top: 3%;
-  padding-bottom: 3%;
-}
-.revcolumn1 {
-  flex: 3;
-  /* width: 50%; */
-  margin-left: 1.5%;
   background-color: #ffffff;
-  border-radius: 35px;
-  box-shadow: 5px 5px 10px 0px #00000029;
-  margin-right: 6%;
-  position: relative;
+  margin: 10px;
 }
-.revcolumn2 {
-  flex: 2;
-  /* width: 50%; */
-  background-color: #ffffff;
-  border-radius: 35px;
-  box-shadow: 5px 5px 10px 0px #00000029;
-  position: relative;
-}
-.revrow2 {
+.rev_draft {
   flex: 1;
-  width: 100%;
   background-color: #ffffff;
-  margin-left: 1.5%;
-  border-radius: 35px;
-  box-shadow: 5px 5px 10px 0px #00000029;
-  position: relative;
+  margin: 10px;
 }
-.table1,
-.table2,
-.table3,
-.todo,
-.draft {
-  width: 100%;
-  border-collapse: collapse;
-  position: relative;
-  /* border-radius: 35px; */
+.table1 {
+  /* border: 2px solid red; */
+  /* margin-top: 20px; */
+  height: 360px;
 }
-.table1 th,
-.table1 td,
-.table2 th,
-.table2 td,
-.table3 th,
-.table3 td,
-.todo th,
-.todo td,
-.draft th,
-.draft td {
-  text-align: left;
-  padding-left: 30px;
-  height: 45px;
-}
-.table1 thead th:first-child,
-.table2 thead th:first-child,
-.table3 thead th:first-child {
-  border-top-left-radius: 35px;
-}
-.table1 thead th:last-child,
-.table2 thead th:last-child,
-.table3 thead th:last-child {
-  border-top-right-radius: 35px;
-}
-.table1 thead,
-.table2 thead,
-.todo thead,
-.draft thead {
-  background-color: #f2f2f2;
-  font-family: "Lato", sans-serif;
-  color: #606060;
-}
-.table3 thead,
-.draft thead {
-  background-color: #b6b5b5;
-  font-family: "Lato", sans-serif;
-  color: #000000;
-}
-.table1 tbody,
-.todo tbody {
-  font-family: "Raleway", sans-serif;
-  color: #000000;
-}
-.table1 tbody tr:nth-child(even),
-.todo tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-.table1 tbody tr:nth-child(odd),
-.todo tbody tr:nth-child(odd) {
-  background-color: #ffffff;
-}
-.table3 tbody tr:nth-child(even),
-.draft tbody tr:nth-child(even) {
-  background-color: #b6b5b5;
-  height: 45px;
-}
-
-.table3 tbody tr:nth-child(odd),
-.draft tbody tr:nth-child(odd) {
-  background-color: #ffffff;
-  height: 45px;
-}
-.startbutton {
-  background-color: transparent;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #e6c42b;
-  color: #000000;
-  border-radius: 5px;
+.button_pick {
   width: 90px;
-  height: 30px;
-  font-weight: bolder;
-}
-.viewbutton {
+  height: 25px;
+  color: white;
   background-color: #e6592b;
-  border: none;
-  color: #ffffff;
-  border-radius: 5px;
-  width: 70px;
-  height: 30px;
+  border-radius: 8px;
 }
-.continuebutton {
-  background-color: #e6592b;
-  border: none;
-  color: #ffffff;
-  border-radius: 5px;
-  width: 120px;
-  height: 30px;
+.button_pick:disabled {
+  opacity: 50%;
 }
-.viewbutton:hover,
-.continuebutton:hover,
-.startbutton:hover {
+.FilterApplyButton {
+  color: #e6592b;
   background-color: transparent;
-  color: #e6592b;
-  border-color: transparent;
+  font-size: large;
 }
-.expand {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin: 20px;
-  font-size: 45px;
-  color: #e6592b;
-}
-.expand:hover {
-  cursor: pointer;
-  transform: scale(1.3);
+.filterbutton {
+  display: flex;
+  justify-content: right;
+  margin-right: 3%;
+  flex: 1;
 }
 .heading {
-  padding-top: 3%;
-  padding-bottom: 2%;
-  font-size: 20px;
-  color: #050000;
-  font-weight: bolder;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  margin: 5px;
+}
+.filter_list {
+  background-color: transparent;
+  font-size: 40px;
+}
+.box {
+  background-color: aqua;
+  max-width: 50px;
+}
+[role="tooltip"].popup-content {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
+  height: 220px;
+  font-size: larger;
+  color: grey;
 }

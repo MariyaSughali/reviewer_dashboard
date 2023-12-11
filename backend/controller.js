@@ -9,8 +9,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const getreviewerRoutes = require("./routes/getreviewer");
 const getTodoListRoutes = require("./routes/todoList");
+const assignFileRoutes = require("./routes/assignFile");
+const setToDraftRoutes = require("./routes/setToDraft");
 
-app.get("/getreviewer", getreviewerRoutes);
+app.get("/getreviewer/:user_id", getreviewerRoutes);
 app.get("/getTodolist", getTodoListRoutes);
+app.post("/assignFile", assignFileRoutes);
+app.put("/setToDraft", setToDraftRoutes);
 
 module.exports = app;

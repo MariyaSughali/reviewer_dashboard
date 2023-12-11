@@ -6,7 +6,7 @@ function Sidebar() {
         <div className="sidebar">
           <a href="/reviewerDashboard" className={"icon"}>
             <span class="material-symbols-outlined google-icon">home</span>
-            <h4 className="text">HOME</h4>
+            <h4 className="text">DASHBOARD</h4>
           </a>
           <a className={"icon"}>
             <span class="material-symbols-outlined google-icon">
